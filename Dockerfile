@@ -1,4 +1,4 @@
-FROM python:3.10.8-slim-buster
+FROM python:3.10-slim-bullseye
 
 # Install system dependencies including ffmpeg
 RUN apt-get update && apt-get upgrade -y \
@@ -17,4 +17,4 @@ WORKDIR /app/
 
 RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 
-CMD python3 main.py
+CMD ["python3", "main.py"]
